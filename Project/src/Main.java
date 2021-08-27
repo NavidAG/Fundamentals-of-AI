@@ -24,10 +24,9 @@ public class Main {
         }
 
         State start = new State(new Board(length, height, map.toString(), new Cube(x, y)));
-//        State temp = BFS.solve(start);
-//        DFS.solve(start);
-        IDS.solve(start);
-//        BFS.solve(start);
+//        AStar4.solve(start);
+//        IDAStar.solve(start);
+        RBFS.solve(start);
     }
 
     /*

@@ -13,7 +13,7 @@ public class BFS {
 
         int count = 0;
         if (start.isFinal()) {
-            start.print();
+//            start.print();
             return start;
         }
 
@@ -23,7 +23,9 @@ public class BFS {
         fringe.add(start);
 
         while (!fringe.isEmpty()) {
+
             State temp = fringe.poll();
+//            System.out.println("filled:" + temp.getHuristic());
             count++;
             if (temp.isFinal()) {
 

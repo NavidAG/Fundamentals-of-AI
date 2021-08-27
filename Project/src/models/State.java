@@ -12,12 +12,19 @@ public class State implements Comparable<State> {
     private int depth;
     private Board board;
     private State parent;
+
+    public State getParent() {
+        return parent;
+    }
+
     private int action;
     //0 -> up
     //1 -> down
     //2 -> left
     //3 -> right
-
+    public int getHuristic(){
+        return board.huristicNotFilled() + getDepth();
+    }
     public State(Board board) {
         this.board = board;
         this.depth = 0;

@@ -69,6 +69,26 @@ public class Board implements Cloneable {
             }
         }
     }
+    //change from here
+    public int huristicNotFilled(){
+        int totalUnFilled = 0;
+        for(int i=0; i<getHeight(); i++){
+            for(int j=0; j<getLength(); j++){
+                if(map[i][j] == 0 && map[i][j] != 2){
+                    totalUnFilled++;
+                }
+            }
+        }
+        int temp = totalUnFilled % 2;
+        if(temp == 0){
+            return totalUnFilled/2;
+        }
+        else
+        {
+            return totalUnFilled/2 + 1;
+        }
+
+    }
 
     private boolean addCubeToMap() {
         if (cube.isStand()) {
