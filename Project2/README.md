@@ -1,1 +1,1 @@
-# Implementation of the BFS, DFS And IDS
+# Implementation of the A* and IDA* and find a suitable heuristic.
